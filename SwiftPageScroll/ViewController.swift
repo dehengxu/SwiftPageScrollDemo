@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         self.scrollView!.bounces = false
         
         for i in 0..count {
-            var offset = i * 320
+            var offset = Float(i) * fm.size.width
             println("offset :\(offset)")
             var v :UIView =  UIView(frame:  CGRectMake(Float(i) * self.scrollView!.frame.size.width, 0, fm.size.width, fm.size.height))
             v.backgroundColor = UIColor.lightGrayColor()
