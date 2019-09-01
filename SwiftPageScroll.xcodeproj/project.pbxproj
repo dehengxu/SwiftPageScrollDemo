@@ -12,6 +12,9 @@
 		24A02568194AC53100071440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A02566194AC53100071440 /* Main.storyboard */; };
 		24A0256A194AC53100071440 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A02569194AC53100071440 /* Images.xcassets */; };
 		24A02576194AC53100071440 /* SwiftPageScrollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A02575194AC53100071440 /* SwiftPageScrollTests.swift */; };
+		94D973D11F45199A008BAAE5 /* PresentationScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D973D01F45199A008BAAE5 /* PresentationScrollView.swift */; };
+		94D973D91F45B2B0008BAAE5 /* UIView_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D973D81F45B2B0008BAAE5 /* UIView_extensions.swift */; };
+		94D973DC1F45B4D5008BAAE5 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D973DB1F45B4D5008BAAE5 /* Numbers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		24A0256F194AC53100071440 /* SwiftPageScrollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPageScrollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A02574194AC53100071440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24A02575194AC53100071440 /* SwiftPageScrollTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPageScrollTests.swift; sourceTree = "<group>"; };
+		94D973D01F45199A008BAAE5 /* PresentationScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationScrollView.swift; sourceTree = "<group>"; };
+		94D973D81F45B2B0008BAAE5 /* UIView_extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_extensions.swift; sourceTree = "<group>"; };
+		94D973DB1F45B4D5008BAAE5 /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +81,10 @@
 		24A0255F194AC53100071440 /* SwiftPageScroll */ = {
 			isa = PBXGroup;
 			children = (
+				94D973D61F45B291008BAAE5 /* utils */,
 				24A02562194AC53100071440 /* AppDelegate.swift */,
 				24A02564194AC53100071440 /* ViewController.swift */,
+				94D973D01F45199A008BAAE5 /* PresentationScrollView.swift */,
 				24A02566194AC53100071440 /* Main.storyboard */,
 				24A02569194AC53100071440 /* Images.xcassets */,
 				24A02560194AC53100071440 /* Supporting Files */,
@@ -107,6 +115,31 @@
 				24A02574194AC53100071440 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94D973D61F45B291008BAAE5 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				94D973DA1F45B491008BAAE5 /* Math */,
+				94D973D71F45B296008BAAE5 /* UIKit */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		94D973D71F45B296008BAAE5 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				94D973D81F45B2B0008BAAE5 /* UIView_extensions.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		94D973DA1F45B491008BAAE5 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				94D973DB1F45B4D5008BAAE5 /* Numbers.swift */,
+			);
+			name = Math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +191,12 @@
 				TargetAttributes = {
 					24A0255C194AC53100071440 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 375GT6S3QN;
+						LastSwiftMigration = 0830;
 					};
 					24A0256E194AC53100071440 = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = 24A0255C194AC53100071440;
 					};
 				};
@@ -170,6 +206,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -208,7 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D973D11F45199A008BAAE5 /* PresentationScrollView.swift in Sources */,
 				24A02565194AC53100071440 /* ViewController.swift in Sources */,
+				94D973DC1F45B4D5008BAAE5 /* Numbers.swift in Sources */,
+				94D973D91F45B2B0008BAAE5 /* UIView_extensions.swift in Sources */,
 				24A02563194AC53100071440 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,9 +367,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 375GT6S3QN;
 				INFOPLIST_FILE = SwiftPageScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -338,9 +380,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 375GT6S3QN;
 				INFOPLIST_FILE = SwiftPageScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -360,6 +404,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -376,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -399,6 +445,7 @@
 				24A0257B194AC53100071440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24A0257C194AC53100071440 /* Build configuration list for PBXNativeTarget "SwiftPageScrollTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +454,7 @@
 				24A0257E194AC53100071440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
